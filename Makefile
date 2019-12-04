@@ -1,2 +1,3 @@
 test1: 	
-	echo "Makefile Test ${ARGS}"
+	echo "Makefile Test"
+	echo ${ARGS}

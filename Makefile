@@ -3,7 +3,7 @@ test1: Jenkinsfile
 	echo "${ARG}"
 	IFS='_'
 	#Read the split words into an array based on comma delimiter
-	read -a strarr <<< "${ARG}"
+	read -a strarr << "${ARG}"
 
 	#Print the splitted words
 	echo "Book Name : $strarr[0] "

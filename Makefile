@@ -1,10 +1,7 @@
 test1: Jenkinsfile
 	echo "Makefile Test"
 	echo "${ARG}"
-	IFS='_'
-	#Read the split words into an array based on comma delimiter
-	read -a strarr << "${ARG}"
-
-	#Print the splitted words
-	echo "Book Name : $strarr[0] "
-	echo "Author Name : $strarr[1] "
+	IFS='_' # space is set as delimiter
+	read -ra ADDR <<< "${ARG}" # str is read into an array as tokens separated by IFS
+	for i in "${ADDR[@]}"; do # access each element of array
+	    echo "$i"
